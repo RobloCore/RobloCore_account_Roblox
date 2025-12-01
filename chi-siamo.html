@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi siamo - MarketNow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: #1a73e8;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;        /* mantiene le proporzioni originali */
+      max-height: 714px;   /* altezza massima uguale all’altezza originale */
+      object-fit: contain;  /* mostra tutta l’immagine senza ritagli */
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h3 {
+      color: #1a73e8;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    footer {
+      background-color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+      color: #777;
+    }
+
+    @media(max-width: 600px) {
+      .container { grid-template-columns: 1fr; padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RobloCore</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="collaborazioni.html">Collaborazioni</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="file:///C:/Users/Utente/OneDrive%20-%20edu.ti.ch/Desktop/non%20entrare/sito%20web%20vendita%20account/Massimo.jpg" alt="Foto Mario Rossi">
+      <div class="card-content">
+        <h3>Massimo Cattaneo</h3>
+        <p>Ciao, sono Massimo. Ho 16 anni, abito a Lugano, adoro ascoltare Sfera Ebbasta un cantante famoso italiano, giocare a Roblox, guardare Youtube e passare del tempo con i miei amici sopratutto con Laura. Frequento una scuola superiore di commercio a Locarno e attualmente sono al secondo anno. La mia canzone preferita di Sfera Ebbasta è "momenti no" dell'album X2VR.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="file:///C:/Users/Utente/OneDrive%20-%20edu.ti.ch/Desktop/non%20entrare/sito%20web%20vendita%20account/Laura.jpg" alt="Foto Laura Bianchi">
+      <div class="card-content">
+        <h3>Laura Giorgi</h3>
+        <p>Ciao, sono Laura. Ho 15 anni e abito a Lugano. Nel tempo libero adoro ascoltare Capo Plaza, giocare a Roblox, guardare video di minecraft su Youtube, passare del tempo con i miei amici sopratutto con Massimo oppure passare del tempo con la mia sorellina Giada di 8 anni. Frequento una scuola superiore di commercio a Locarno e attualmente sono al primo anno. La mia canzone preferita di Capo Plaza è "giovane fuoriclasse" mentre la mia paura più grande è quella dei ragni.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 RobloCore. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>
