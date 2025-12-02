@@ -63,6 +63,26 @@
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   letter-spacing: 0.5px;
 }
+ .header-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+.header-buttons button {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.header-buttons button:hover {
+  background: #1664c1;
+}
 
   </style>
 </head>
@@ -70,14 +90,21 @@
 
 <header>
   <h1>RobloCore</h1>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="chi-siamo.html">Chi siamo</a>
     <a href="collaborazioni.html">Collaborazioni</a>
   </nav>
+
+  <div class="header-buttons">
+    <button onclick="window.location.href='maschili.html'">Account Maschili</button>
+    <button onclick="window.location.href='femminili.html'">Account Femminili</button>
+  </div>
+
   <div class="header-alert">
-  ⚠️ ATTENZIONE: tutti gli account hanno un prezzo minimo di 0.01€
-</div>
+    ⚠️ ATTENZIONE: tutti gli account hanno un prezzo minimo di 0.01€
+  </div>
 </header>
 
 <div class="products">
@@ -145,6 +172,7 @@
 
 </body>
 </html>
+
 
 
 
