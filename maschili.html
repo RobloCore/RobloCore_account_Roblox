@@ -38,24 +38,27 @@
 </header>
 
 <div class="header-alert">
-⚠️ Stai visualizzando solo gli account maschili (1-8)
+⚠️ Stai visualizzando solo gli account maschili
 </div>
 
 <div class="products">
 <script>
-  const prices = [0.35, 0.18, 0.12, 0.16, 0.07, 0.09, 0.06, 0.10];
-  for (let i = 1; i <= 8; i++) {
+  const allPrices = [0.35, 0.18, 0.12, 0.16, 0.07, 0.09, 0.06, 0.10, 0.14, 0.11, 0.10, 0.13, 0.22, 0.06, 0.10, 0.15, 0.12, 0.07, 0.03];
+  const maschili = [1, 4, 6, 9, 10, 14, 15, 17, 18]; // ID maschili
+
+  maschili.forEach(id => {
+    const prezzo = allPrices[id-1].toFixed(2);
     document.write(`
       <div class="product-card">
         <div class="product-info">
-          <h3>Account ${i}</h3>
-          <p>€${prices[i-1].toFixed(2)}</p>
-          <button onclick="window.open('carrello.html?nome=Account ${i}&prezzo=${prices[i-1].toFixed(2)}', '_blank')">Aggiungi al carrello</button>
-          <button onclick="window.location.href='info.html?id=${i}'">Info</button>
+          <h3>Account ${id}</h3>
+          <p>€${prezzo}</p>
+          <button onclick="window.open('carrello.html?nome=Account ${id}&prezzo=${prezzo}', '_blank')">Aggiungi al carrello</button>
+          <button onclick="window.location.href='info.html?id=${id}'">Info</button>
         </div>
       </div>
     `);
-  }
+  });
 </script>
 </div>
 
