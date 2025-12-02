@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Account Femminili - RobloCore</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background-color: #f9f9f9; color: #333; }
-    header { background-color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between;
-             align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+    header { background-color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
     header h1 { font-weight: 700; color: #1a73e8; }
     nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
     nav a:hover { color: #1a73e8; }
+
     .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 2rem; max-width: 1500px; margin: auto; }
     .product-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; transition: .2s; }
+    .product-card img { width: 100%; height: 200px; object-fit: cover; }
     .product-card:hover { transform: translateY(-5px); }
     .product-info { padding: 1rem; }
     .product-info h3 { margin-bottom: .5rem; }
@@ -26,6 +28,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <h1>RobloCore</h1>
   <nav>
@@ -38,18 +41,41 @@
 </header>
 
 <div class="header-alert">
-⚠️ Stai visualizzando solo gli account femminili
+  ⚠️ ATTENZIONE: tutti gli account hanno un prezzo minimo di 0.01€
 </div>
 
 <div class="products">
-<script>
-  const allPrices = [0.35, 0.18, 0.12, 0.16, 0.07, 0.09, 0.06, 0.10, 0.14, 0.11, 0.10, 0.13, 0.22, 0.06, 0.10, 0.15, 0.12, 0.07];
-  const femminili = [2, 3, 5, 7, 8, 11, 12, 13, 16, 19]; // ID femminili corretti
 
-  femminili.forEach(id => {
+<script>
+  // 🔥 Lista account femminili
+  const femminili = [2, 3, 5, 7, 8, 11, 12, 13, 16, 19];
+
+  // 🔥 Prezzi
+  const allPrices = [
+    0.35, 0.18, 0.12, 0.16, 0.07, 0.09, 0.06, 0.10, 0.14,
+    0.11, 0.10, 0.13, 0.22, 0.06, 0.10, 0.15, 0.12, 0.07
+  ];
+
+  // 🔥 Immagini (puoi sostituire con quelle corrette)
+  const images = [
+    "immagini/ShadowLight_241.jpg",
+    "immagini/EternalStorm6.jpg",
+    "immagini/StarryWanderer1.jpg",
+    "immagini/CrystalSky106.jpg",
+    "immagini/acc8.jpg",
+    "immagini/acc11.jpg",
+    "immagini/acc12.jpg",
+    "immagini/acc13.jpg",
+    "immagini/acc16.jpg",
+    "immagini/acc19.jpg"
+  ];
+
+  femminili.forEach((id, index) => {
     const prezzo = allPrices[id-1].toFixed(2);
+    const img = images[index];
     document.write(`
       <div class="product-card">
+        <img src="${img}" alt="Account ${id}">
         <div class="product-info">
           <h3>Account ${id}</h3>
           <p>€${prezzo}</p>
@@ -60,10 +86,12 @@
     `);
   });
 </script>
+
 </div>
 
 <footer>
   &copy; 2025 RobloCore — Tutti i diritti riservati.
 </footer>
+
 </body>
 </html>
