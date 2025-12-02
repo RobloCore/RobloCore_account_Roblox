@@ -2,8 +2,66 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Account Femminili</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Femminili - RobloCore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; }
+    header { background-color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between;
+             align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+    header h1 { font-weight: 700; color: #1a73e8; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #1a73e8; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 2rem; max-width: 1500px; margin: auto; }
+    .product-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; transition: .2s; }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-info { padding: 1rem; }
+    .product-info h3 { margin-bottom: .5rem; }
+    .product-info p { margin-bottom: .7rem; color: #1a73e8; font-weight: bold; }
+    button { width: 100%; padding: 0.7rem; margin-bottom: .5rem; border: none; background: #1a73e8; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; transition: .3s; }
+    button:hover { background: #1664c1; }
+    footer { background: #fff; padding: 2rem; text-align: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.05); margin-top: 2rem; }
+    .header-alert { background: #ff3b3b; color: white; padding: 1rem 2rem; border-radius: 10px; font-size: 1.1rem; font-weight: 700; margin-left: 2rem; box-shadow: 0 3px 8px rgba(0,0,0,0.15); letter-spacing: 0.5px; }
+  </style>
 </head>
-<body style="background:white;">
+<body>
+<header>
+  <h1>RobloCore</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="chi-siamo.html">Chi siamo</a>
+    <a href="collaborazioni.html">Collaborazioni</a>
+    <a href="maschili.html">Account Maschili</a>
+    <a href="femminili.html">Account Femminili</a>
+  </nav>
+</header>
+
+<div class="header-alert">
+⚠️ Stai visualizzando solo gli account femminili (9-16)
+</div>
+
+<div class="products">
+<script>
+  const prices = [0.14, 0.11, 0.10, 0.13, 0.22, 0.06, 0.10, 0.15];
+  for (let i = 1; i <= 8; i++) {
+    const accountId = i + 8; // parte dal 9
+    document.write(`
+      <div class="product-card">
+        <div class="product-info">
+          <h3>Account ${accountId}</h3>
+          <p>€${prices[i-1].toFixed(2)}</p>
+          <button onclick="window.open('carrello.html?nome=Account ${accountId}&prezzo=${prices[i-1].toFixed(2)}', '_blank')">Aggiungi al carrello</button>
+          <button onclick="window.location.href='info.html?id=${accountId}'">Info</button>
+        </div>
+      </div>
+    `);
+  }
+</script>
+</div>
+
+<footer>
+  &copy; 2025 RobloCore — Tutti i diritti riservati.
+</footer>
 </body>
 </html>
